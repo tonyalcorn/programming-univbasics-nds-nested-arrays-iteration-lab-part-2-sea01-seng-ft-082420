@@ -11,23 +11,23 @@ array_of_daily_temperatures = [
 def find_min_in_nested_arrays(array_of_daily_temperatures)
   outer_results = []
   row_index = 0
-  while row_index < spice_rack.count do
+  while row_index < array_of_daily_temperatures.count do
     element_index = 0
-    longest_string_element = ""
-    while element_index < spice_rack[row_index].count do
-      if spice_rack[row_index][element_index].length > longest_string_element.length
-        longest_string_element = spice_rack[row_index][element_index]
-        end
+    shortest_string_element = ""
+    while element_index < array_of_daily_temperatures[row_index].count do
+      if array_of_daily_temperatures[row_index][element_index].length < shortest_string_element.length
+        shortest_string_element = array_of_daily_temperatures[row_index][element_index]
+      end
         element_index += 1
-        end
-        outer_results << longest_string_element
+    end
+        outer_results << shortest_string_element_string_element
         row_index += 1
-        end
-  # src will be an array of arrays of integers
-  # Produce a new Array that contains the smallest number of each of the nested arrays
-
+  end
+  outer_results
 end
 
+# src will be an array of arrays of integers
+  # Produce a new Array that contains the smallest number of each of the nested arrays
 
 # Array at row_index
     # Element of the inner array at element_index
